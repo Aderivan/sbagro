@@ -1,5 +1,7 @@
 package com.api.sbagro.api;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,23 +17,24 @@ import com.api.sbagro.domain.repository.FuncionarioRepository;
 @RestController
 @RequestMapping("/funcionarios")
 public class FuncionarioController {
-	
+
 	@Autowired
 	private FuncionarioRepository funcionarioRepository;
-	
+
 	@GetMapping()
 	public List<Funcionario> listar() {
+		
 		return funcionarioRepository.listar();
 	}
-	
+
 	@GetMapping("{funcionarioId}")
 	public ResponseEntity<Funcionario> buscar(@PathVariable String funcionarioId) {
 		Funcionario funcionario = funcionarioRepository.buscar(funcionarioId);
-		
-		if(funcionario != null) {
+		if (funcionario != null && funcionario.getFuncionarioDeletado() != "T"
+				&& funcionario.getDataDemissao() == null) {
 			return ResponseEntity.ok(funcionario);
 		}
-		
+
 		return ResponseEntity.notFound().build();
 	}
 
