@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//criacao
 @Entity
 @Table(name = "TCOM009")
 public class Usuarios {
