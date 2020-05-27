@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 
 import com.api.sbagro.ApiSbAgroApplication;
 import com.api.sbagro.domain.model.Engenho;
-import com.api.sbagro.insfrastructure.repository.EngenhoRepositoryImpl;
+import com.api.sbagro.repositoryImpl.EngenhoRepositoryImpl;
 
 public class ConsultaEngenhoMain {
 	

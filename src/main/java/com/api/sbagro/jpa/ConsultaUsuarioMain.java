@@ -7,10 +7,10 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 
 import com.api.sbagro.ApiSbAgroApplication;
-import com.api.sbagro.domain.model.Funcionario;
-import com.api.sbagro.repositoryImpl.FuncionarioRepositoryImpl;
+import com.api.sbagro.domain.model.Usuarios;
+import com.api.sbagro.repositoryImpl.UsuarioRepositoryImpl;
 
-public class ConsultaFuncionarioMain {
+public class ConsultaUsuarioMain {
 	
 public static void main(String[] args) {
 		
@@ -18,12 +18,12 @@ public static void main(String[] args) {
 				.web(WebApplicationType.NONE)
 				.run(args);
 		
-		FuncionarioRepositoryImpl cadastroFuncionario = aplicContext.getBean(FuncionarioRepositoryImpl.class);
+		UsuarioRepositoryImpl cadastroUsuario = aplicContext.getBean(UsuarioRepositoryImpl.class);
 		
-		List<Funcionario> funcionarios = cadastroFuncionario.listar();
+		List<Usuarios> usuarios = cadastroUsuario.listar();
 		
-		for(Funcionario funcionario : funcionarios) {
-			System.out.println(funcionario.getNomeDaFuncao());
+		for(Usuarios usuario : usuarios) {
+			System.out.println(usuario.getNome());
 		}
 	}
 }

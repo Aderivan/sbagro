@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "trrht00")
-public class Engenho {
+@Table(name = "TCOM009")
+public class Usuarios {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,8 +17,11 @@ public class Engenho {
 
 	private String nome;
 
+	@Column(name = "senha1")
+	private String senha;
+
 	@Column(name = "sr_deleted")
-	private String engenhoDeletado;
+	private String usuarioDeletado;
 
 	@Override
 	public int hashCode() {
@@ -36,7 +39,7 @@ public class Engenho {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Engenho other = (Engenho) obj;
+		Usuarios other = (Usuarios) obj;
 		if (codigo == null) {
 			if (other.codigo != null)
 				return false;
@@ -61,11 +64,20 @@ public class Engenho {
 		this.nome = nome;
 	}
 
-	public String getEngenhoDeletado() {
-		return engenhoDeletado;
+	public String getSenha() {
+		return senha;
 	}
 
-	public void setEngenhoDeletado(String engenhoDeletado) {
-		this.engenhoDeletado = engenhoDeletado;
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
+
+	public String getUsuarioDeletado() {
+		return usuarioDeletado;
+	}
+
+	public void setUsuarioDeletado(String usuarioDeletado) {
+		this.usuarioDeletado = usuarioDeletado;
+	}
+
 }

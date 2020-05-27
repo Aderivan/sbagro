@@ -1,4 +1,4 @@
-package com.api.sbagro.insfrastructure.repository;
+package com.api.sbagro.repositoryImpl;
 
 import java.util.List;
 
@@ -19,7 +19,8 @@ public class EngenhoRepositoryImpl implements EngenhoRepository {
 	@Override
 	public List<Engenho> listar() {
 		
-		return manager.createQuery("from Engenho", Engenho.class).getResultList();
+		return manager.createQuery("from Engenho where engenhoDeletado <> 'T'", 
+				Engenho.class).getResultList();
 	}
 
 	@Override

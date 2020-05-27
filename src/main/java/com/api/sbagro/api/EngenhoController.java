@@ -29,7 +29,7 @@ public class EngenhoController {
 	public ResponseEntity<Engenho> buscar(@PathVariable String engenhoId) {
 		Engenho engenho = engenhoRepository.buscar(engenhoId);
 		
-		if (engenho != null) {
+		if (engenho != null && engenho.getEngenhoDeletado() != "T") {
 			return ResponseEntity.ok(engenho);
 		}
 				
