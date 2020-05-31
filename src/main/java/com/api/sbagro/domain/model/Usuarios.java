@@ -1,6 +1,5 @@
 package com.api.sbagro.domain.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,11 +16,9 @@ public class Usuarios {
 
 	private String nome;
 
-	@Column(name = "senha1")
-	private String senha;
+	private String senha1;
 
-	@Column(name = "sr_deleted")
-	private String usuarioDeletado;
+	private String sr_deleted;
 
 	@Override
 	public int hashCode() {
@@ -64,20 +61,20 @@ public class Usuarios {
 		this.nome = nome;
 	}
 
-	public String getSenha() {
-		return senha;
+	public String getSenha1() {
+		return senha1;
 	}
 
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setSenha1(String senha1) {
+		this.senha1 = senha1;
 	}
 
-	public String getUsuarioDeletado() {
-		return usuarioDeletado;
+	public String getSr_deleted() {
+		return sr_deleted;
 	}
 
-	public void setUsuarioDeletado(String usuarioDeletado) {
-		this.usuarioDeletado = usuarioDeletado;
+	public void setSr_deleted(String sr_deleted) {
+		this.sr_deleted = sr_deleted;
 	}
 
 }

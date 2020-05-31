@@ -28,7 +28,7 @@ public class UsuarioController {
 	public ResponseEntity<Usuarios> buscar(@PathVariable String usuarioId) {
 		Usuarios usuario = usuarioRepository.buscar(usuarioId);
 		
-		if(usuario != null && usuario.getUsuarioDeletado() != "T") {
+		if(usuario != null && usuario.getSr_deleted() != "T") {
 			return ResponseEntity.ok(usuario);
 		}
 		

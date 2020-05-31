@@ -28,8 +28,8 @@ public class FuncionarioController {
 	@GetMapping("{funcionarioId}")
 	public ResponseEntity<Funcionario> buscar(@PathVariable String funcionarioId) {
 		Funcionario funcionario = funcionarioRepository.buscar(funcionarioId);
-		if (funcionario != null && funcionario.getFuncionarioDeletado() != "T"
-				&& funcionario.getDataDemissao() == null) {
+		if (funcionario != null && funcionario.getSr_deleted() != "T"
+				&& funcionario.getDatdem() == null) {
 			return ResponseEntity.ok(funcionario);
 		}
 

@@ -2,7 +2,6 @@ package com.api.sbagro.domain.model;
 
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,28 +11,22 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "TRRHC01")
 public class Funcionario {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String codigo;
-	
-	@Column(name = "nomfun")
-	private String nomeDoFuncionario;
-	
-	@Column(name = "datadm")
-	private Date dataAdmissao;
-	
-	@Column(name = "datdem")
-	private Date dataDemissao;
-	
-	@Column(name = "inigfer")
-	private Date inicioDeFerias;
-	
-	@Column(name = "fingfer")
-	private Date fimDeFerias;
-	
-	@Column(name = "sr_deleted")
-	private String funcionarioDeletado;
+
+	private String nomfun;
+
+	private Date datadm;
+
+	private Date datdem;
+
+	private Date inigfer;
+
+	private Date fingfer;
+
+	private String sr_deleted;
 
 	@Override
 	public int hashCode() {
@@ -68,51 +61,52 @@ public class Funcionario {
 		this.codigo = codigo;
 	}
 
-	public String getNomeDaFuncao() {
-		return nomeDoFuncionario;
+	public String getNomfun() {
+		return nomfun;
 	}
 
-	public void setNomeDaFuncao(String nomeDaFuncao) {
-		this.nomeDoFuncionario = nomeDaFuncao;
+	public void setNomfun(String nomfun) {
+		this.nomfun = nomfun;
 	}
 
-	public Date getDataAdmissao() {
-		return dataAdmissao;
+	public Date getDatadm() {
+		return datadm;
 	}
 
-	public void setDataAdmissao(Date dataAdmissao) {
-		this.dataAdmissao = dataAdmissao;
+	public void setDatadm(Date datadm) {
+		this.datadm = datadm;
 	}
 
-	public Date getDataDemissao() {
-		return dataDemissao;
+	public Date getDatdem() {
+		return datdem;
 	}
 
-	public void setDataDemissao(Date dataDemissao) {
-		this.dataDemissao = dataDemissao;
+	public void setDatdem(Date datdem) {
+		this.datdem = datdem;
 	}
 
-	public Date getInicioDeFerias() {
-		return inicioDeFerias;
+	public Date getInigfer() {
+		return inigfer;
 	}
 
-	public void setInicioDeFerias(Date inicioDeFerias) {
-		this.inicioDeFerias = inicioDeFerias;
+	public void setInigfer(Date inigfer) {
+		this.inigfer = inigfer;
 	}
 
-	public Date getFimDeFerias() {
-		return fimDeFerias;
+	public Date getFingfer() {
+		return fingfer;
 	}
 
-	public void setFimDeFerias(Date fimDeFerias) {
-		this.fimDeFerias = fimDeFerias;
+	public void setFingfer(Date fingfer) {
+		this.fingfer = fingfer;
 	}
 
-	public String getFuncionarioDeletado() {
-		return funcionarioDeletado;
+	public String getSr_deleted() {
+		return sr_deleted;
 	}
 
-	public void setFuncionarioDeletado(String funcionarioDeletado) {
-		this.funcionarioDeletado = funcionarioDeletado;
-	}		
+	public void setSr_deleted(String sr_deleted) {
+		this.sr_deleted = sr_deleted;
+	}
+
 }

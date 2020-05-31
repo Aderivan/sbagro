@@ -28,7 +28,7 @@ public class EventoController {
 	public ResponseEntity<Eventos> buscar(@PathVariable String eventoId) {
 		Eventos evento = eventoRepository.buscar(eventoId);
 
-		if (evento != null && evento.getEventoDeletado() != "T") {
+		if (evento != null && evento.getSr_deleted() != "T") {
 			return ResponseEntity.ok(evento);
 		}
 

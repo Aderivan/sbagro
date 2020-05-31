@@ -1,6 +1,5 @@
 package com.api.sbagro.domain.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,23 +16,17 @@ public class Eventos {
 
 	private String nome;
 
-	@Column(name = "tipeve")
-	private String tipoEvento;
+	private String tipeve;
 
-	@Column(name = "valmax")
-	private Double valorMaximo;
+	private Double valmax;
 
-	@Column(name = "valmin")
-	private Double valorMinimo;
+	private Double valmin;
 
-	@Column(name = "valpad")
-	private Double valorPadrao;
+	private Double valpad;
 
-	@Column(name = "percen")
-	private Double percentual;
+	private Double percen;
 
-	@Column(name = "sr_deleted")
-	private String eventoDeletado;
+	private String sr_deleted;
 
 	@Override
 	public int hashCode() {
@@ -76,52 +69,52 @@ public class Eventos {
 		this.nome = nome;
 	}
 
-	public String getTipoEvento() {
-		return tipoEvento;
+	public String getTipeve() {
+		return tipeve;
 	}
 
-	public void setTipoEvento(String tipoEvento) {
-		this.tipoEvento = tipoEvento;
+	public void setTipeve(String tipeve) {
+		this.tipeve = tipeve;
 	}
 
-	public Double getValorMaximo() {
-		return valorMaximo;
+	public Double getValmax() {
+		return valmax;
 	}
 
-	public void setValorMaximo(Double valorMaximo) {
-		this.valorMaximo = valorMaximo;
+	public void setValmax(Double valmax) {
+		this.valmax = valmax;
 	}
 
-	public Double getValorMinimo() {
-		return valorMinimo;
+	public Double getValmin() {
+		return valmin;
 	}
 
-	public void setValorMinimo(Double valorMinimo) {
-		this.valorMinimo = valorMinimo;
+	public void setValmin(Double valmin) {
+		this.valmin = valmin;
 	}
 
-	public Double getValorPadrao() {
-		return valorPadrao;
+	public Double getValpad() {
+		return valpad;
 	}
 
-	public void setValorPadrao(Double valorPadrao) {
-		this.valorPadrao = valorPadrao;
+	public void setValpad(Double valpad) {
+		this.valpad = valpad;
 	}
 
-	public Double getPercentual() {
-		return percentual;
+	public Double getPercen() {
+		return percen;
 	}
 
-	public void setPercentual(Double percentual) {
-		this.percentual = percentual;
+	public void setPercen(Double percen) {
+		this.percen = percen;
 	}
 
-	public String getEventoDeletado() {
-		return eventoDeletado;
+	public String getSr_deleted() {
+		return sr_deleted;
 	}
 
-	public void setEventoDeletado(String eventoDeletado) {
-		this.eventoDeletado = eventoDeletado;
+	public void setSr_deleted(String sr_deleted) {
+		this.sr_deleted = sr_deleted;
 	}
 
 }

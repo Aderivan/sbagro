@@ -23,7 +23,7 @@ public static void main(String[] args) {
 		List<Funcionario> funcionarios = cadastroFuncionario.listar();
 		
 		for(Funcionario funcionario : funcionarios) {
-			System.out.println(funcionario.getNomeDaFuncao());
+			System.out.println(funcionario.getNomfun());
 		}
 	}
 }
