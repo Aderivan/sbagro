@@ -19,7 +19,7 @@ public class EngenhoRepositoryImpl implements EngenhoRepository {
 	@Override
 	public List<Engenho> listar() {
 		
-		return manager.createQuery("from Engenho where engenhoDeletado <> 'T'", 
+		return manager.createQuery("from Engenho where sr_deleted <> 'T'", 
 				Engenho.class).getResultList();
 	}
 

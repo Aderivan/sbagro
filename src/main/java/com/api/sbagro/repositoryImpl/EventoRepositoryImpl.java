@@ -18,7 +18,7 @@ public class EventoRepositoryImpl implements EventoRepository{
 
 	@Override
 	public List<Eventos> listar() {
-		return manager.createQuery("from Eventos where eventoDeletado <> 'T'",
+		return manager.createQuery("from Eventos where sr_deleted <> 'T'",
 				Eventos.class).getResultList();
 	}
 

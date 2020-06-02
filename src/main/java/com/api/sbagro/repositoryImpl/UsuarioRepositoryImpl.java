@@ -18,7 +18,7 @@ public class UsuarioRepositoryImpl implements UsuarioRepository{
 
 	@Override
 	public List<Usuarios> listar() {
-		return manager.createQuery("from Usuarios where usuarioDeletado <> 'T'", 
+		return manager.createQuery("from Usuarios where sr_deleted <> 'T'", 
 				Usuarios.class).getResultList();
 	}
 

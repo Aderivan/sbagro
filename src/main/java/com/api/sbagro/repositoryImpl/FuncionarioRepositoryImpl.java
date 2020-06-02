@@ -18,7 +18,7 @@ public class FuncionarioRepositoryImpl implements FuncionarioRepository{
 
 	@Override
 	public List<Funcionario> listar() {
-		return manager.createQuery("from Funcionario where funcionarioDeletado <> 'T' and dataDemissao = null", 
+		return manager.createQuery("from Funcionario where sr_deleted <> 'T' and datdem = null", 
 				Funcionario.class).getResultList();
 	}
 
