@@ -26,6 +26,8 @@ public class Funcionario {
 
 	private Date fingfer;
 
+	private Double salbas;
+
 	private String sr_deleted;
 
 	@Override
@@ -99,6 +101,14 @@ public class Funcionario {
 
 	public void setFingfer(Date fingfer) {
 		this.fingfer = fingfer;
+	}
+
+	public Double getSalbas() {
+		return salbas;
+	}
+
+	public void setSalbas(Double salbas) {
+		this.salbas = salbas;
 	}
 
 	public String getSr_deleted() {
