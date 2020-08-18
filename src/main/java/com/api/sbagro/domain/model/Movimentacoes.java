@@ -30,7 +30,6 @@ public class Movimentacoes {
 	private Integer sr_recno;
 	private String sr_deleted;
 	private String usuario;
-	private String nomeFuncionario;
 
 	public String getCodigo() {
 		return codigo;
@@ -166,14 +165,6 @@ public class Movimentacoes {
 
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
-	}
-
-	public String getNomeFuncionario() {
-		return nomeFuncionario;
-	}
-
-	public void setNomeFuncionario(String nomeFuncionario) {
-		this.nomeFuncionario = nomeFuncionario;
 	}
 
 }
