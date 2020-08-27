@@ -23,8 +23,8 @@ public class MovimentacoesRepositoryImpl implements MovimentacoesRepository{
 				Movimentacoes.class).getResultList();
 	}
 
-	@Override
 	@Transactional
+	@Override
 	public Movimentacoes save(Movimentacoes movimentacoes) {
 		return manager.merge(movimentacoes);
 	}

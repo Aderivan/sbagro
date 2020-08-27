@@ -1,20 +1,18 @@
 package com.api.sbagro.domain.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "TRRHM04 ")
+@Table(name = "trrhm04")
 public class Movimentacoes {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String codigo;
-
-	private String dataeve;
+	private Date dateve;
 	private String codeve;
 	private Integer seqeve;
 	private String engtrb;
@@ -23,7 +21,7 @@ public class Movimentacoes {
 	private Double qtdobt;
 	private Double valotar;
 	private Double indice;
-	private Integer flag;
+	private Integer flaga;
 	private String lote;
 	private String cabo;
 	private Double desp_prod;
@@ -39,12 +37,12 @@ public class Movimentacoes {
 		this.codigo = codigo;
 	}
 
-	public String getDataeve() {
-		return dataeve;
+	public Date getDateve() {
+		return dateve;
 	}
 
-	public void setDataeve(String dataeve) {
-		this.dataeve = dataeve;
+	public void setDateve(Date dateve) {
+		this.dateve = dateve;
 	}
 
 	public String getCodeve() {
@@ -111,12 +109,12 @@ public class Movimentacoes {
 		this.indice = indice;
 	}
 
-	public Integer getFlag() {
-		return flag;
+	public Integer getFlaga() {
+		return flaga;
 	}
 
-	public void setFlag(Integer flag) {
-		this.flag = flag;
+	public void setFlaga(Integer flaga) {
+		this.flaga = flaga;
 	}
 
 	public String getLote() {
