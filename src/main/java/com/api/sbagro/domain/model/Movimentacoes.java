@@ -2,15 +2,15 @@ package com.api.sbagro.domain.model;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "trrhm04")
 public class Movimentacoes {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 	private String codigo;
 	private Date dateve;
 	private String codeve;
@@ -165,4 +165,11 @@ public class Movimentacoes {
 		this.usuario = usuario;
 	}
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 }
